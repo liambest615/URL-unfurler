@@ -1,0 +1,17 @@
+// Function to unfurl a URL
+function unfurl(url) {
+  // Extract the domain and path from the URL
+  const domain = url.split('//');
+  const path = url.split('//');
+
+  // Construct the unfurled URL
+  const unfurledUrl = domain + '//' + path;
+
+  // Return the unfurled URL
+  return unfurledUrl;
+}
+
+// Example usage
+const originalUrl = 'https://example.com/some-path';
+const unfurledUrl = unfurl(originalUrl);
+console.log(unfurledUrl); // Output: example.com/some-path
